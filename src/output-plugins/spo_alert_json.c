@@ -450,8 +450,8 @@ static AlertJSONData *AlertJSONParseArgs(char *args) {
 	char *geoIP6_org_path = NULL;
 #endif /* SUP_IP6 */
 #endif /* HAVE_GEOIP */
-#ifdef HAVE_RB_MAC_VENDORS
 	char *eth_vendors_path = NULL;
+#ifdef HAVE_RB_MAC_VENDORS
 #endif
 
 	DEBUG_WRAP(DebugMessage(DEBUG_INIT, "ParseJSONArgs: %s\n", args););
@@ -463,8 +463,8 @@ static AlertJSONData *AlertJSONParseArgs(char *args) {
 	if ( !args ) args = "";
 	toks = mSplit((char *)args, " \t", 0, &num_toks, '\\');
 
-#ifdef HAVE_LIBRDKAFKA
 	char *kafka_str      = NULL;
+#ifdef HAVE_LIBRDKAFKA
 	data->kafka.rk_conf  = rd_kafka_conf_new();
 	data->kafka.rkt_conf = rd_kafka_topic_conf_new();
 #endif
