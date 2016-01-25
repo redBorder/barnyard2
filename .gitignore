@@ -4,7 +4,6 @@ aclocal.m4
 autom4te.cache/
 cflags.out
 /config.*
-configure
 cppflags.out
 install-sh
 libtool
