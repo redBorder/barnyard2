@@ -135,6 +135,7 @@
 #define KAFKA_PROT "kafka://"
 #define HTTP_PROT  "http://"
 #define HTTPS_PROT "https://"
+#define FILE_PROT "file://"
 #define FILENAME_KAFKA_SEPARATOR '+'
 #define BROKER_TOPIC_SEPARATOR   '@'
 
@@ -297,6 +298,10 @@ typedef struct _AlertJSONData
         struct rb_http_handler_s *handler;
     } http;
 #endif
+    struct {
+        char *json_file_path;
+        FILE *json_file;
+    } file;
 } AlertJSONData;
 
 static const char *priority_name[] = {NULL, "high", "medium", "low", "very low"};
@@ -651,6 +656,16 @@ static AlertJSONData *AlertJSONParseArgs(char *args)
             RB_IF_CLEAN(eth_vendors_path,eth_vendors_path = SnortStrdup(tok+strlen("eth_vendors=")),"%s(%i) param setted twice.\n",tok,i);
         }
         #endif
+        else if(!strncasecmp(tok,FILE_PROT,strlen(FILE_PROT)))
+        {
+            RB_IF_CLEAN(data->file.json_file_path,
+                        data->file.json_file_path = SnortStrdup(tok+strlen(FILE_PROT)),
+                        "%s(%i) param setted twice.\n", tok ,i);
+            data->file.json_file = fopen(data->file.json_file_path, "a");
+            if (data->file.json_file == NULL) {
+                FatalError("alert_json: Cannot create json file: %s %s ", tok, i);
+            }
+        }
         else
         {
             FatalError("alert_json: Cannot parse %s(%i): %s\n",
@@ -1053,6 +1068,8 @@ static void AlertJSONCleanup(int signal, void *arg, const char* msg)
             TAILQ_REMOVE(&data->output_template, template_element, qentry);
             free(template_element);
         }
+        if (data->file.json_file_path)
+            fclose(data->file.json_file);
 
         /* free memory from SpoJSONData */
         free(data);
@@ -2314,6 +2331,9 @@ static void RealAlertJSON(Packet * p, void *event, uint32_t event_type, AlertJSO
     DEBUG_WRAP(DebugMessage(DEBUG_LOG,"[alert_json]: %s",printbuf->buf););
 
     rprintbuf->refcnt = 1;
+
+    if(jsonData->file.json_file_path)
+	fwrite(printbuf->buf, printbuf->size + 1, 1, jsonData->file.json_file);
 
 #ifdef HAVE_LIBRDKAFKA
     if(unlikely(NULL == jsonData->kafka.rk && NULL != jsonData->kafka.brokers))
