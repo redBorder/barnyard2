@@ -424,6 +424,9 @@ int ProcessBatch(const char *dirpath, const char *filename)
 
     }
 
+    spoolerFireLastEvent(spooler);
+    AlarmClear();
+
     /* we've finished with the spooler so destroy and cleanup */
     spoolerClose(spooler);
     spooler = NULL;

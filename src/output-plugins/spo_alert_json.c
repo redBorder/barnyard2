@@ -1068,7 +1068,7 @@ static void AlertJSONCleanup(int signal, void *arg, const char* msg)
             TAILQ_REMOVE(&data->output_template, template_element, qentry);
             free(template_element);
         }
-        if (data->file.json_file_path)
+        if (data->file.json_file_path && BcBatchMode())
             fclose(data->file.json_file);
 
         /* free memory from SpoJSONData */
@@ -2332,9 +2332,11 @@ static void RealAlertJSON(Packet * p, void *event, uint32_t event_type, AlertJSO
 
     rprintbuf->refcnt = 1;
 
-    if(jsonData->file.json_file_path)
-	fwrite(printbuf->buf, printbuf->size + 1, 1, jsonData->file.json_file);
-
+    if(jsonData->file.json_file_path)  {
+	fwrite(printbuf->buf, printbuf->bpos, 1, jsonData->file.json_file);
+        /* sizeof(char) is 1 */
+	fwrite("\n", 1, 1, jsonData->file.json_file);
+    }
 #ifdef HAVE_LIBRDKAFKA
     if(unlikely(NULL == jsonData->kafka.rk && NULL != jsonData->kafka.brokers))
     {

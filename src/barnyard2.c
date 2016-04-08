@@ -377,14 +377,8 @@ restart:
             for(idx = 0; idx < barnyard2_conf->batch_total_files; idx++)
             {
 		ProcessBatch("", barnyard2_conf->batch_filelist[idx]);
-		if( SignalCheck())
-		{
-		    /* Clean Things up */
-		    Barnyard2Cleanup(0,0);
-		    /* Relaunch status */
-		    goto restart;
-		}
-	    }
+            }
+		Barnyard2Cleanup(0,0);
         }
     }
     /* Continual processing mode */
@@ -1238,9 +1232,11 @@ static void Barnyard2Cleanup(int exit_val,int exit_needed)
         }
     }
 
-    spoolerCloseWaldo(&barnyard2_conf->waldo);
+    if (!BcBatchMode()) {
+        spoolerCloseWaldo(&barnyard2_conf->waldo);
+    }
 
-    if(barnyard2_conf->spooler)
+    if(barnyard2_conf->spooler && !BcBatchMode())
     {
 	spoolerClose(barnyard2_conf->spooler);
 	barnyard2_conf->spooler = NULL;
