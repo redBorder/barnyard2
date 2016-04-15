@@ -1,0 +1,52 @@
+{
+	"message1":[
+		{
+			"expected_values": {
+					"timestamp": 1447691657,
+					"sensor_id_snort": 0,
+					"action": "alert",
+					"sig_generator": 146,
+					"sig_id": 63,
+					"rev": 1,
+					"priority": "unknown",
+					"classification": "-",
+					"sha256": "3031323334353637383930313233343536373839303132333435363738393132",
+					"file_size": 620,
+					"l4_proto_name": "6",
+					"l4_proto": 6,
+					"vlan": 0,
+					"vlan_name": "0",
+					"src_port": 80,
+					"src_port_name": "80",
+					"dst_port": 43286,
+					"dst_port_name": "43286",
+					"src_asnum": 3407039632,
+					"src": "144.76.19.203",
+					"src_name": "144.76.19.203",
+					"dst_asnum": "1629356042",
+					"dst_name": "10.0.30.97",
+					"dst": "10.0.30.97",
+					"ttl": 54,
+					"tos": 0,
+					"id": 36444,
+					"iplen": 1037,
+					"iplen_range": "[1024-2048)",
+					"dgmlen": 1037,
+					"sensor_uuid": "8774121593779421049",
+					"sensor_name": "sensorTest2",
+					"file_hostname": "hostnametest",
+					"group_uuid": "3080051061528950217",
+					"group_name": "default",
+					"sensor_type": "ips",
+					"domain_name": "root",
+					"ftp_user": "ftpuser",
+					"sensor_ip": "10.0.70.149",
+					"email_sender": "ejimenez@redborder.net",
+					"email_destinations": "[\"malware@redborder.net\"]",
+					"smb_uid":13105
+			},
+			"blacklist": [
+			]
+		}
+	]
+}
