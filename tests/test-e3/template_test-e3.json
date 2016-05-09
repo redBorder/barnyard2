@@ -1,0 +1,58 @@
+{
+	"message1":[
+		{
+			"expected_values": {
+					"file_uri": "www.BancodeImagenesGratuitas.com-Fantasticas-20.jpg"
+			},
+			"blacklist": [
+			]
+		}],
+	"message2":[
+		{
+			"expected_values": {
+					"file_uri": "www.BancodeImagenesGratuitas.com-Fantasticas-20.jpg\\\\"
+			},
+			"blacklist": [
+			]
+		}],
+	"message3":[
+		{
+			"expected_values": {
+					"file_uri": "www.BancodeImagenesGratuitas.com-Fantasticas-20.jpg\\\\\\\\"
+			},
+			"blacklist": [
+			]
+		}],
+	"message4":[
+		{
+			"expected_values": {
+					"file_uri": "www.BancodeImagenesGratuitas.com-Fantasticas-20.jpg\\\""
+			},
+			"blacklist": [
+			]
+		}],
+	"message5":[
+		{
+			"expected_values": {
+					"file_uri": "www.BancodeImagenesGratuitas.com-Fantasticas-20.jpg\\\"\\\""
+			},
+			"blacklist": [
+			]
+		}],
+	"message6":[
+		{
+			"expected_values": {
+					"file_uri": "www.BancodeImagenesGratuitas.com-Fantasticas-20.jpg\\u0001\\u0000"
+			},
+			"blacklist": [
+			]
+		}],
+	"message7":[
+		{
+			"expected_values": {
+					"file_uri": "www.BancodeImagenesGratuitas.com-Fantasticas-20.jpg\\u0000"
+			},
+			"blacklist": [
+			]
+		}]
+}
