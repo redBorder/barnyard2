@@ -42,7 +42,7 @@
 					"ftp_user": "ftpuser",
 					"sensor_ip": "10.0.70.149",
 					"email_sender": "ejimenez@redborder.net",
-					"email_destinations": "[\"malware@redborder.net\"]",
+					"email_destinations": "[\\\"malware@redborder.net\\\"]",
 					"smb_uid":13105
 			},
 			"blacklist": [
