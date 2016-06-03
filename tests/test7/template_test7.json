@@ -1,0 +1,63 @@
+{
+	"message1":[
+		{
+			"expected_values": {
+				"timestamp":1453369625,
+				"sig_id": 70,
+				"src": "216.58.211.193",
+				"dst": "10.0.30.130",
+				"src_port": 80,
+				"dst_port": 36114,
+				"vlan": 0
+			},
+			"blacklist": [
+				"aaa"
+			]
+		}
+	],
+	"message2":[
+		{
+			"expected_values": {
+				"timestamp":1453369625,
+				"sig_id": 70,
+				"src": "216.58.211.193",
+				"dst": "10.0.30.130",
+				"src_port": 80,
+				"dst_port": 36120,
+				"vlan": 0
+			},
+			"blacklist": [
+			]
+		}
+	],
+	"message3":[
+		{
+			"expected_values": {
+				"timestamp":1453369625,
+				"sig_id": 70,
+				"src": "216.58.211.193",
+				"dst": "10.0.30.130",
+				"src_port": 80,
+				"dst_port": 36122,
+				"vlan": 0
+			},
+			"blacklist": [
+			]
+		}
+	],
+	"message4":[
+		{
+			"expected_values": {
+				"timestamp":1453369625,
+				"sig_id": 70,
+				"src": "23.39.87.131",
+				"dst": "10.0.30.130",
+				"src_port": 80,
+				"dst_port": 60860,
+				"vlan": 0
+			},
+			"blacklist": [
+			]
+		}
+	]
+}
