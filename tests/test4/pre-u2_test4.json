@@ -1,0 +1,39 @@
+{
+ "entries":[
+  {
+   "type": "Unified2IDSEventIPv6",
+   "length": 84,
+   "sensor_id": 0,
+   "event_id": 136021,
+   "event_second": 1435139298,
+   "event_microsecond": 201616,
+   "sig_id": 28039,
+   "generator_id": 1,
+   "revision": 5,
+   "classification": 18,
+   "priority_id": 1,
+   "src": "FE80:0000:0000:0000:0202:B3FF:FE1E:8329",
+   "dst": "FE80:0000:0000:0000:0202:B3FF:FE1E:8328",
+   "src_port": 50214,
+   "dst_port": 53,
+   "protocol": 17,
+   "impact_flag": 32,
+   "impact": 0,
+   "blocked": 1,
+   "mpls_label": 0,
+   "vlan": 0,
+   "policy_id": 0
+  },{
+   "type": "Serial_Unified2Packet",
+   "length": 60,
+   "sensor_id": 0,
+   "event_id": 136025,
+   "event_second": 1435139098,
+   "packet_second": 1435139098,
+   "packet_microsecond": 201516,
+   "linktype": 1,
+   "packet_length": 60,
+   "data":"BEFE384A9FF1080027273BE00800450000297AB740008006DFBF0A00D4171725AB1BC6A40050DE268D3EA809E4035010010050140000000000000000"
+  }
+ ]
+}

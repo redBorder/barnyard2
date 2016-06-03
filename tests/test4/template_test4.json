@@ -1,0 +1,39 @@
+{
+	"message1":[
+		{
+			"expected_values": {
+				"timestamp": 1435139298,
+				"sensor_id_snort": 0,
+				"action": "drop",
+				"sig_generator": 1,
+				"sig_id": 28039,
+				"rev": 5,
+				"priority": "high",
+				"classification": "A Network Trojan was Detected",
+				"msg": "INDICATOR-COMPROMISE Suspicious .pw dns query",
+				"payload": "-",
+				"l4_proto_name": "17",
+				"l4_proto": 17,
+				"vlan": 0,
+				"vlan_name": "0",
+				"src_port": 50214,
+				"src_port_name": "50214",
+				"dst_port": 53,
+				"dst_port_name": "53",
+				"src": "fe80:0000:0000:0000:0202:b3ff:fe1e:8329",
+				"src_name": "fe80:0000:0000:0000:0202:b3ff:fe1e:8329",
+				"dst_name": "fe80:0000:0000:0000:0202:b3ff:fe1e:8328",
+				"dst": "fe80:0000:0000:0000:0202:b3ff:fe1e:8328",
+				"sensor_uuid": "8774121593779421049",
+				"sensor_name": "sensorTest2",
+				"group_uuid": "3080051061528950217",
+				"group_name": "default",
+				"sensor_type": "ips",
+				"domain_name": "root",
+				"sensor_ip": "10.0.70.149"
+			},
+			"blacklist": [
+			]
+		}
+	]
+}
