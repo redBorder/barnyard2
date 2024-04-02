@@ -338,7 +338,7 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = foreign no-dependencies
 ACLOCAL_AMFLAGS = -I m4
-SUBDIRS = src etc doc rpm schemas m4
+SUBDIRS = src etc doc schemas m4
 EXTRA_DIST = COPYING LICENSE README RELEASE.NOTES ltmain.sh autogen.sh
 all: config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-recursive

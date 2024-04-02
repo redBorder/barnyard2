@@ -3,7 +3,7 @@ AUTOMAKE_OPTIONS = foreign no-dependencies
 
 ACLOCAL_AMFLAGS = -I m4
 
-SUBDIRS = src etc doc rpm schemas m4
+SUBDIRS = src etc doc schemas m4
 
 INCLUDES = @INCLUDES@
 
