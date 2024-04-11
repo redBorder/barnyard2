@@ -1311,7 +1311,6 @@ src/input-plugins/Makefile \
 src/output-plugins/Makefile \
 etc/Makefile \
 doc/Makefile \
-rpm/Makefile \
 schemas/Makefile \
 m4/Makefile])
 AC_OUTPUT

@@ -17099,7 +17099,7 @@ INCLUDES='-I$(top_srcdir) -I$(top_srcdir)/src -I$(top_srcdir)/src/sfutil $(extra
 
 
 
-ac_config_files="$ac_config_files Makefile src/Makefile src/sfutil/Makefile src/rbutil/Makefile src/input-plugins/Makefile src/output-plugins/Makefile etc/Makefile doc/Makefile rpm/Makefile schemas/Makefile m4/Makefile"
+ac_config_files="$ac_config_files Makefile src/Makefile src/sfutil/Makefile src/rbutil/Makefile src/input-plugins/Makefile src/output-plugins/Makefile etc/Makefile doc/Makefile schemas/Makefile m4/Makefile"
 
 cat >confcache <<\_ACEOF
 # This file is a shell script that caches the results of configure
@@ -18132,7 +18132,6 @@ do
     "src/output-plugins/Makefile") CONFIG_FILES="$CONFIG_FILES src/output-plugins/Makefile" ;;
     "etc/Makefile") CONFIG_FILES="$CONFIG_FILES etc/Makefile" ;;
     "doc/Makefile") CONFIG_FILES="$CONFIG_FILES doc/Makefile" ;;
-    "rpm/Makefile") CONFIG_FILES="$CONFIG_FILES rpm/Makefile" ;;
     "schemas/Makefile") CONFIG_FILES="$CONFIG_FILES schemas/Makefile" ;;
     "m4/Makefile") CONFIG_FILES="$CONFIG_FILES m4/Makefile" ;;
 
