@@ -5,7 +5,6 @@ cflags.out
 /config.*
 cppflags.out
 libtool
-Makefile
 src/barnyard2
 src/input-plugins/libspi.a
 src/output-plugins/libspo.a
