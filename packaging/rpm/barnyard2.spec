@@ -31,7 +31,7 @@ License: GPL
 Group: Applications/Internet
 Url: http://www.github.com/firnsy/barnyard2
 
-BuildRequires: librd-devel librdkafka-devel librb-http-devel libpcap-devel GeoIP-devel rb_macs_vendors
+BuildRequires: librd-devel librdkafka-devel librb-http-devel libpcap-devel GeoIP-devel rb_macs_vendors gcc
 Requires: librd0 librdkafka librb-http0 libpcap curl-devel GeoIP-devel GeoIP GeoIP-GeoLite-data-extra rb_macs_vendors
 
 %description
